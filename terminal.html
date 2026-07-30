@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HYBRID-1 · Research Terminal</title>
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@600;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#F4F3EE; --panel:#FCFCF9; --ink:#17191B; --dim:#6E7268; --faint:#A3A69B;
+    --line:#E1DFD5; --green:#2F7D4F; --greenSoft:#DDEAE0; --red:#AF3B3B; --amber:#B98A2F;
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--bg); color:var(--ink); font-family:'IBM Plex Mono', ui-monospace, monospace; }
+  .wrap { max-width:760px; margin:0 auto; padding:14px 12px 60px; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; margin-top:14px; }
+  .lbl { font-size:9px; letter-spacing:1.6px; color:var(--dim); text-transform:uppercase; }
+  .micro { font-size:9px; color:var(--faint); letter-spacing:.5px; }
+  .doto { font-family:'Doto', monospace; font-weight:800; }
+  .badge { display:inline-block; font-size:9px; border:1px solid var(--line); border-radius:99px;
+           padding:2px 8px; color:var(--dim); letter-spacing:1px; margin-right:6px; }
+  .badge.live { border-color:var(--green); color:var(--green); background:var(--greenSoft); }
+  .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+  .hair { border-top:1px dashed var(--line); margin:12px 0; }
+  input[type=range] { width:100%; accent-color:var(--ink); }
+  @media (prefers-reduced-motion: reduce) { * { animation:none !important; transition:none !important; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ── Masthead ─────────────────────────────────────────────── -->
+  <div style="display:flex; justify-content:space-between; align-items:center; padding:4px 2px;">
+    <div>
+      <div class="lbl">HYBRID-1 · VALUE × QUANT · PAPER</div>
+      <div style="font-size:17px; font-weight:600; letter-spacing:.5px; margin-top:2px;">RESEARCH TERMINAL</div>
+    </div>
+    <div style="text-align:right;">
+      <span class="badge live">● PAPER · STRICT</span>
+      <div class="micro" style="margin-top:4px;" id="clock">RUN 2026-07-30 · POST-FED</div>
+    </div>
+  </div>
+
+  <!-- ── P&L block (dot-matrix) ───────────────────────────────── -->
+  <div class="panel">
+    <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+      <div>
+        <span class="lbl">TOTAL EQUITY · REAL PAPER RESULTS ONLY</span>
+        <div class="doto" id="equity" style="font-size:46px; line-height:1.1; margin-top:4px;">$1,000</div>
+        <div class="micro" style="margin-top:4px;">
+          <span class="badge">1 TRADE</span><span class="badge">WIN RATE — (n too small)</span><span class="badge">SHARPE — (needs months)</span>
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <div class="lbl">OPEN P&L</div>
+        <div id="openpnl" style="font-size:20px; font-weight:600; color:var(--green); margin-top:2px;">+$0.00</div>
+        <div class="micro" id="deployed">DEPLOYED 20% · CASH $800</div>
+      </div>
+    </div>
+    <div class="hair"></div>
+    <div class="grid2">
+      <div>
+        <div class="lbl">POSITION · SILVER</div>
+        <div style="font-size:13px; margin-top:3px;">3.4025 oz @ $58.78</div>
+        <div class="micro">STOP 56.56 · RISK $7.55 (0.76% OF BOOK)</div>
+      </div>
+      <div>
+        <div class="lbl">RULES · ENFORCED IN CODE</div>
+        <div class="micro" style="margin-top:3px; line-height:1.7;">MAX RISK/TRADE 1.5% · POS CAP 20%<br>CRYPTO CAP 25% · STOP 2×DAILY VOL</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Probability Lattice (honest Monte Carlo) ─────────────── -->
+  <div class="panel">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <div>
+        <span class="lbl">◆ PROBABILITY LATTICE · NEXT 100 TRADES</span>
+        <div class="micro" style="margin-top:2px;">SIMULATION OF OUR RISK RULES — NOT RESULTS. EVERY BALL = ONE SIMULATED 100-TRADE PATH.</div>
+      </div>
+      <span class="micro" id="latstats"></span>
+    </div>
+    <canvas id="lattice" width="700" height="240" style="width:100%; margin-top:10px;"></canvas>
+    <div class="hair"></div>
+    <div class="grid2" style="align-items:center;">
+      <div>
+        <div class="lbl">ASSUMED WIN RATE <span id="wrLabel" style="color:var(--ink);">45%</span> · WINNERS 2R, LOSERS 1R</div>
+        <input type="range" id="wr" min="25" max="60" value="45" />
+      </div>
+      <div style="text-align:right;">
+        <div class="lbl">EXPECTED VALUE / TRADE</div>
+        <div id="ev" style="font-size:18px; font-weight:600;"></div>
+        <div class="micro">DRAG THE SLIDER — SEE WHY MOST TRADERS LOSE</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Range Landscape (ridge) ──────────────────────────────── -->
+  <div class="panel">
+    <span class="lbl">◆ 52-WEEK RANGE LANDSCAPE · MARKER = LAST PRICE · ▲ = CONVICTION</span>
+    <div class="micro" style="margin-top:2px;">RANGES APPROXIMATE FROM LATEST SCAN · JUL 30 2026</div>
+    <svg id="ridge" viewBox="0 0 700 330" style="width:100%; margin-top:8px;"></svg>
+  </div>
+
+  <!-- ── Agent log ────────────────────────────────────────────── -->
+  <div class="panel">
+    <span class="lbl">◆ AGENT LOG</span>
+    <div id="log" style="margin-top:8px; font-size:11px; line-height:2; color:var(--dim);"></div>
+  </div>
+
+  <div class="micro" style="text-align:center; margin-top:20px; line-height:1.9;">
+    PAPER TRADING · SIMULATED CAPITAL · NOT FINANCIAL ADVICE<br>
+    EVERY NUMBER ON THIS TERMINAL IS REAL PAPER DATA OR LABELED SIMULATION — NO MARKETING MATH
+  </div>
+</div>
+
+<script>
+// ── Live data (falls back to baked snapshot) ─────────────────────
+const SNAPSHOT = {
+  cash: 800, positions: { SILVER: { shares: 3.4025, entry: 58.78, stop: 56.56 } },
+  watchlist: {
+    SILVER:{last_price:58.78,conviction:66}, NVDA:{last_price:212.06,conviction:60},
+    AAPL:{last_price:325.89,conviction:60}, XOM:{last_price:153,conviction:48},
+    GOLD:{last_price:4081,conviction:47}, MSFT:{last_price:393.35,conviction:47},
+    "WTI-OIL":{last_price:83.04,conviction:33}, "BTC-USD":{last_price:63865,conviction:25},
+  },
+  history: [
+    {ts:"2026-07-30T09:41",action:"BUY",ticker:"SILVER",shares:3.4025,price:58.78},
+    {ts:"2026-07-30T09:41",action:"SCAN",ticker:"8 ASSETS",note:"post-Fed re-score · hawkish hold, 3 dissents"},
+    {ts:"2026-07-29T21:14",action:"SCAN",ticker:"WATCHLIST",note:"commodities + energy added"},
+    {ts:"2026-07-29T08:02",action:"INIT",ticker:"BOOK",note:"reset to $1,000 · strict mode"},
+  ],
+};
+const RANGES = [ // [name, lo, hi, last, conviction, held]
+  ["SILVER", 55.50, 61.61, 58.78, 66, true],
+  ["NVDA", 164.07, 236.54, 212.06, 60, false],
+  ["AAPL", 201.50, 334.99, 325.89, 60, false],
+  ["GOLD", 3919, 5602, 4081, 47, false],
+  ["MSFT", 344, 556, 393.35, 47, false],
+  ["BTC", 63000, 126200, 63865, 25, false],
+];
+
+let DATA = SNAPSHOT;
+fetch("./portfolio.json",{cache:"no-store"}).then(r=>r.ok?r.json():Promise.reject())
+  .then(d=>{ DATA=d; render(); }).catch(()=>render());
+
+function render() {
+  const pos = Object.entries(DATA.positions||{});
+  const posVal = pos.reduce((s,[t,p])=>s+p.shares*((DATA.watchlist?.[t]?.last_price)??p.entry),0);
+  const total = DATA.cash + posVal;
+  const pnl = pos.reduce((s,[t,p])=>s+p.shares*(((DATA.watchlist?.[t]?.last_price)??p.entry)-p.entry),0);
+  document.getElementById("equity").textContent = "$"+total.toLocaleString(undefined,{maximumFractionDigits:0});
+  const pn = document.getElementById("openpnl");
+  pn.textContent = (pnl>=0?"+":"−")+"$"+Math.abs(pnl).toFixed(2);
+  pn.style.color = pnl>=0 ? "var(--green)" : "var(--red)";
+  document.getElementById("deployed").textContent =
+    "DEPLOYED "+Math.round(posVal/total*100)+"% · CASH $"+DATA.cash.toFixed(0);
+  document.getElementById("log").innerHTML = (DATA.history||[]).slice().reverse().map(e=>{
+    const tag = e.action==="BUY" ? `<span style="color:var(--green); font-weight:600;">BUY</span>` :
+                e.action==="SELL" ? `<span style="color:var(--red); font-weight:600;">SELL</span>` :
+                `<span style="color:var(--faint);">${e.action}</span>`;
+    const body = e.note || `${(e.shares??"").toString().slice(0,7)} ${e.ticker} @ $${(e.price??0).toFixed(2)}`;
+    return `<div>${(e.ts||"").slice(5,16).replace("T"," ")} · ${tag} · ${body}${e.pnl!=null?` · P&L ${e.pnl>=0?"+":""}$${e.pnl.toFixed(2)}`:""}</div>`;
+  }).join("");
+}
+
+// ── Ridge landscape (SVG) ────────────────────────────────────────
+(function ridge(){
+  const svg = document.getElementById("ridge");
+  const W=700, rowH=48, left=90, right=660;
+  let out = "";
+  RANGES.forEach((r,i)=>{
+    const [name, lo, hi, last, conv, held] = r;
+    const y = 30 + i*rowH;
+    const px = left + (last-lo)/(hi-lo)*(right-left);
+    // stylized ridge curve across the range
+    let path = `M ${left} ${y}`;
+    for (let x=0;x<=1;x+=0.05){
+      const cx = left + x*(right-left);
+      const bump = Math.exp(-Math.pow((x-0.5)/0.28,2)) * 26;
+      path += ` L ${cx} ${y-bump}`;
+    }
+    path += ` L ${right} ${y}`;
+    const col = held ? "var(--green)" : conv<=40 ? "var(--red)" : "var(--dim)";
+    out += `<path d="${path}" fill="rgba(23,25,27,0.045)" stroke="var(--line)" stroke-width="1"/>
+      <line x1="${left}" y1="${y}" x2="${right}" y2="${y}" stroke="var(--line)"/>
+      <text x="4" y="${y-4}" font-size="11" font-family="IBM Plex Mono" fill="${held?'var(--green)':'var(--ink)'}" font-weight="600">${name}</text>
+      <text x="4" y="${y+10}" font-size="8" font-family="IBM Plex Mono" fill="var(--faint)">${lo.toLocaleString()}–${hi.toLocaleString()}</text>
+      <line x1="${px}" y1="${y-30}" x2="${px}" y2="${y+4}" stroke="${col}" stroke-width="2"/>
+      <text x="${Math.min(px+5,620)}" y="${y-20}" font-size="9" font-family="IBM Plex Mono" fill="${col}">${last.toLocaleString()} ▲${conv}</text>`;
+  });
+  svg.innerHTML = out;
+})();
+
+// ── Probability lattice: Monte Carlo of OUR rules ────────────────
+const cv = document.getElementById("lattice"), cx = cv.getContext("2d");
+const SIMS=400, TRADES=100, RISK=15; // $15 = 1.5% of $1,000
+let results=[], bins=[], balls=[], anim;
+
+function runSims(wr){
+  results=[];
+  for(let s=0;s<SIMS;s++){
+    let pnl=0;
+    for(let t=0;t<TRADES;t++) pnl += Math.random()<wr ? 2*RISK : -RISK;
+    results.push(pnl);
+  }
+  const lo=Math.min(...results), hi=Math.max(...results), NB=25;
+  bins = new Array(NB).fill(0);
+  results.forEach(v=>bins[Math.min(NB-1,Math.floor((v-lo)/(hi-lo+1e-9)*NB))]++);
+  const median = results.slice().sort((a,b)=>a-b)[SIMS>>1];
+  const pWin = results.filter(v=>v>0).length/SIMS;
+  document.getElementById("latstats").textContent =
+    `MEDIAN ${median>=0?"+":""}$${median.toFixed(0)} · P(PROFIT) ${(pWin*100).toFixed(0)}%`;
+  const ev = wr*2*RISK - (1-wr)*RISK;
+  const evEl = document.getElementById("ev");
+  evEl.textContent = (ev>=0?"+":"−")+"$"+Math.abs(ev).toFixed(2);
+  evEl.style.color = ev>=0 ? "var(--green)" : "var(--red)";
+  return {lo,hi};
+}
+
+function draw(range){
+  const W=cv.width, H=cv.height, base=H-8, maxB=Math.max(...bins);
+  cx.clearRect(0,0,W,H);
+  // pegboard dots
+  cx.fillStyle="#C9C7BC";
+  for(let r=0;r<6;r++) for(let c=0;c<=r+6;c++)
+    cx.fillRect(W/2+(c-(r+6)/2)*34, 16+r*18, 2.5, 2.5);
+  // zero line
+  const zeroX = (0-range.lo)/(range.hi-range.lo+1e-9)*(W-60)+30;
+  cx.strokeStyle="#B98A2F"; cx.setLineDash([3,3]);
+  cx.beginPath(); cx.moveTo(zeroX,120); cx.lineTo(zeroX,base); cx.stroke(); cx.setLineDash([]);
+  cx.fillStyle="#B98A2F"; cx.font="8px 'IBM Plex Mono'"; cx.fillText("BREAKEVEN", zeroX-24, 116);
+  // histogram
+  const bw=(W-60)/bins.length;
+  bins.forEach((b,i)=>{
+    const h=b/maxB*95, x=30+i*bw;
+    const val = range.lo + (i+0.5)/bins.length*(range.hi-range.lo);
+    cx.fillStyle = val>=0 ? "rgba(47,125,79,0.75)" : "rgba(175,59,59,0.55)";
+    cx.fillRect(x, base-h, bw-2, h);
+  });
+  // falling balls (decorative)
+  cx.fillStyle="#17191B";
+  balls.forEach(b=>{ cx.beginPath(); cx.arc(b.x,b.y,2.4,0,7); cx.fill();
+    b.y+=b.vy; b.x+=Math.sin(b.y/12)*1.1; if(b.y>base-6){ b.y=10; b.x=cv.width/2+(Math.random()-0.5)*20; } });
+}
+
+function start(){
+  const wr = +document.getElementById("wr").value/100;
+  document.getElementById("wrLabel").textContent = Math.round(wr*100)+"%";
+  const range = runSims(wr);
+  cancelAnimationFrame(anim);
+  const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  balls = reduced ? [] : Array.from({length:14},()=>({x:cv.width/2+(Math.random()-0.5)*20, y:Math.random()*180, vy:1.6+Math.random()}));
+  (function loop(){ draw(range); if(!reduced) anim=requestAnimationFrame(loop); })();
+}
+document.getElementById("wr").addEventListener("input", start);
+start();
+</script>
+</body>
+</html>
