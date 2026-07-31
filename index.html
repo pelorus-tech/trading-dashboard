@@ -65,9 +65,29 @@
       </div>
       <div>
         <div class="lbl">RULES · ENFORCED IN CODE</div>
-        <div class="micro" style="margin-top:3px; line-height:1.7;">MAX RISK/TRADE 1.5% · POS CAP 20%<br>CRYPTO CAP 25% · STOP 2×DAILY VOL</div>
+        <div class="micro" style="margin-top:3px; line-height:1.7;">MAX RISK/TRADE 1.5% · POS CAP 20% · GROUP CAP 40%<br>CRYPTO CAP 25% · STOP 2×DAILY VOL<br>FEES 0.1%/SIDE SIMULATED · BREAKER AT -10% DD</div>
       </div>
     </div>
+  </div>
+
+  <!-- ── Equity curve vs benchmark ────────────────────────────── -->
+  <div class="panel">
+    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+      <span class="lbl">◆ EQUITY CURVE · BOOK VS S&P 500 · BOTH START = 100</span>
+      <span class="micro" id="ddlabel"></span>
+    </div>
+    <div id="curvewrap" style="margin-top:8px;"></div>
+    <div class="micro" style="margin-top:6px;">
+      <span style="color:var(--ink);">■</span> BOOK &nbsp;
+      <span style="color:var(--faint);">■</span> SPY &nbsp;·&nbsp;
+      THE ONLY QUESTION THAT MATTERS: IS THE DARK LINE ABOVE THE GREY ONE?
+    </div>
+  </div>
+
+  <!-- ── Exposure breakdown ───────────────────────────────────── -->
+  <div class="panel">
+    <span class="lbl">◆ EXPOSURE · % OF BOOK PER MACRO GROUP · CAP 40%</span>
+    <div id="exposure" style="margin-top:8px;"></div>
   </div>
 
   <!-- ── Probability Lattice (honest Monte Carlo) ─────────────── -->
@@ -171,6 +191,53 @@ function render() {
     }).join("");
     posBlock.innerHTML = `<div class="lbl">OPEN POSITIONS (${pos.length})</div>${rows}`;
   }
+
+  // Equity curve vs SPY (normalized to 100 at first shared point)
+  const curve = DATA.equity_curve || [];
+  const dd = DATA.drawdown ?? 0;
+  document.getElementById("ddlabel").textContent =
+    "DRAWDOWN " + (dd*100).toFixed(1) + "% FROM PEAK" + (dd >= 0.10 ? " · ⛔ BREAKER ACTIVE" : "");
+  const wrap = document.getElementById("curvewrap");
+  if (curve.length < 2) {
+    wrap.innerHTML = `<div class="micro">COLLECTING HISTORY — ${curve.length} DAY${curve.length===1?"":"S"} RECORDED. THE CURVE DRAWS ITSELF FROM HERE.</div>`;
+  } else {
+    const W=660, H=140, PL=8, PR=8;
+    const eq0 = curve[0].eq, spy0 = curve.find(p=>p.spy)?.spy;
+    const eqN = curve.map(p=>p.eq/eq0*100);
+    const spyN = spy0 ? curve.map(p=>p.spy ? p.spy/spy0*100 : null) : [];
+    const all = eqN.concat(spyN.filter(v=>v!=null));
+    const lo = Math.min(...all)-1, hi = Math.max(...all)+1;
+    const x = i => PL + i/(curve.length-1)*(W-PL-PR);
+    const y = v => H-10 - (v-lo)/(hi-lo)*(H-24);
+    const line = arr => arr.map((v,i)=>v==null?null:`${x(i).toFixed(1)},${y(v).toFixed(1)}`)
+                         .filter(Boolean).join(" ");
+    wrap.innerHTML = `<svg viewBox="0 0 ${W} ${H}" style="width:100%;">
+      <line x1="${PL}" y1="${y(100)}" x2="${W-PR}" y2="${y(100)}" stroke="var(--line)" stroke-dasharray="3,3"/>
+      ${spyN.length ? `<polyline points="${line(spyN)}" fill="none" stroke="var(--faint)" stroke-width="1.5"/>` : ""}
+      <polyline points="${line(eqN)}" fill="none" stroke="var(--ink)" stroke-width="2"/>
+      <text x="${PL}" y="12" font-size="9" font-family="IBM Plex Mono" fill="var(--faint)">${curve[0].d}</text>
+      <text x="${W-PR}" y="12" font-size="9" font-family="IBM Plex Mono" fill="var(--faint)" text-anchor="end">${curve[curve.length-1].d}</text>
+      <text x="${W-PR}" y="${y(eqN[eqN.length-1])-4}" font-size="9" font-family="IBM Plex Mono" fill="var(--ink)" text-anchor="end">${eqN[eqN.length-1].toFixed(1)}</text>
+    </svg>`;
+  }
+
+  // Exposure bars
+  const expo = DATA.exposure || {};
+  const expoEl = document.getElementById("exposure");
+  const entries = Object.entries(expo).sort((a,b)=>b[1]-a[1]);
+  const cashPct = total > 0 ? DATA.cash/total : 1;
+  entries.push(["cash", cashPct]);
+  expoEl.innerHTML = entries.map(([g,v])=>{
+    const pct = (v*100).toFixed(0);
+    const warn = g !== "cash" && v > 0.35;
+    return `<div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+      <span class="micro" style="min-width:60px; text-transform:uppercase; color:${warn?'var(--red)':'var(--dim)'};">${g}</span>
+      <div style="flex:1; height:8px; background:#EBE9E0; border-radius:4px; overflow:hidden;">
+        <div style="width:${Math.min(v*100,100)}%; height:100%; background:${warn?'var(--red)':g==='cash'?'var(--line)':'var(--green)'};"></div>
+      </div>
+      <span class="micro" style="min-width:34px; text-align:right; color:${warn?'var(--red)':'var(--dim)'};">${pct}%</span>
+    </div>`;
+  }).join("") || `<div class="micro">NO POSITIONS — 100% CASH</div>`;
 
   // Trade badges — real counts from history, not hardcoded
   const buys = (DATA.history||[]).filter(h=>h.action==="BUY").length;
