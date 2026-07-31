@@ -47,8 +47,8 @@
       <div>
         <span class="lbl">TOTAL EQUITY · REAL PAPER RESULTS ONLY</span>
         <div class="doto" id="equity" style="font-size:46px; line-height:1.1; margin-top:4px;">$1,000</div>
-        <div class="micro" style="margin-top:4px;">
-          <span class="badge">1 TRADE</span><span class="badge">WIN RATE — (n too small)</span><span class="badge">SHARPE — (needs months)</span>
+        <div class="micro" style="margin-top:4px;" id="badges">
+          <span class="badge">— TRADES</span><span class="badge">WIN RATE — (n too small)</span><span class="badge">SHARPE — (needs months)</span>
         </div>
       </div>
       <div style="text-align:right;">
@@ -59,10 +59,9 @@
     </div>
     <div class="hair"></div>
     <div class="grid2">
-      <div>
-        <div class="lbl">POSITION · SILVER</div>
-        <div style="font-size:13px; margin-top:3px;">3.4025 oz @ $58.78</div>
-        <div class="micro">STOP 56.56 · RISK $7.55 (0.76% OF BOOK)</div>
+      <div id="positions-block">
+        <div class="lbl">OPEN POSITIONS</div>
+        <div class="micro" style="margin-top:3px;">loading…</div>
       </div>
       <div>
         <div class="lbl">RULES · ENFORCED IN CODE</div>
@@ -155,6 +154,33 @@ function render() {
   pn.style.color = pnl>=0 ? "var(--green)" : "var(--red)";
   document.getElementById("deployed").textContent =
     "DEPLOYED "+Math.round(posVal/total*100)+"% · CASH $"+DATA.cash.toFixed(0);
+
+  // Positions block — loops over WHATEVER is currently open, not a fixed asset
+  const posBlock = document.getElementById("positions-block");
+  if (pos.length === 0) {
+    posBlock.innerHTML = `<div class="lbl">OPEN POSITIONS</div>
+      <div class="micro" style="margin-top:3px;">NONE — 100% CASH</div>`;
+  } else {
+    const rows = pos.map(([t,p])=>{
+      const last = (DATA.watchlist?.[t]?.last_price) ?? p.entry;
+      const riskPct = ((p.entry-p.stop)*p.shares/total*100).toFixed(2);
+      return `<div style="margin-top:6px;">
+        <span style="font-weight:600;">${t}</span> ${p.shares.toFixed(4)} @ $${p.entry.toFixed(2)}
+        <div class="micro">STOP ${p.stop.toFixed(2)} · RISK ${riskPct}% OF BOOK · NOW $${last.toFixed(2)}</div>
+      </div>`;
+    }).join("");
+    posBlock.innerHTML = `<div class="lbl">OPEN POSITIONS (${pos.length})</div>${rows}`;
+  }
+
+  // Trade badges — real counts from history, not hardcoded
+  const buys = (DATA.history||[]).filter(h=>h.action==="BUY").length;
+  const sells = (DATA.history||[]).filter(h=>h.action==="SELL");
+  const wins = sells.filter(h=>h.pnl>0).length;
+  const wrText = sells.length >= 10 ? `${Math.round(wins/sells.length*100)}%` : "— (n too small)";
+  document.getElementById("badges").innerHTML =
+    `<span class="badge">${buys} TRADE${buys===1?"":"S"}</span>` +
+    `<span class="badge">WIN RATE ${wrText}</span>` +
+    `<span class="badge">SHARPE — (needs months)</span>`;
   document.getElementById("log").innerHTML = (DATA.history||[]).slice().reverse().map(e=>{
     const tag = e.action==="BUY" ? `<span style="color:var(--green); font-weight:600;">BUY</span>` :
                 e.action==="SELL" ? `<span style="color:var(--red); font-weight:600;">SELL</span>` :
