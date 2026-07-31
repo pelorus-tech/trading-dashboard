@@ -67,45 +67,45 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 302.295,
+      "last_price": 302.65,
       "conviction": 59.0,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 458.46,
+      "last_price": 458.0,
       "conviction": 46.5,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 195.4409,
+      "last_price": 196.515,
       "conviction": 57.8,
       "note": "Excellent ROE 114% (moat signal); Conservative debt (D/E 0.07); Strong margins 63%"
     },
     "XOM": {
-      "last_price": 153.98,
-      "conviction": 54.8,
+      "last_price": 153.84,
+      "conviction": 67.3,
       "note": "Weak ROE 10%; Conservative debt (D/E 0.18); Okay margins 8%"
     },
     "SLV": {
-      "last_price": 51.915,
+      "last_price": 51.94,
       "conviction": 50.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +65%"
     },
     "GLD": {
-      "last_price": 370.92,
+      "last_price": 370.79,
       "conviction": 50.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +25%"
     },
     "USO": {
-      "last_price": 130.51,
+      "last_price": 129.79,
       "conviction": 80.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +31%"
     },
     "BTC-USD": {
-      "last_price": 62410.0,
+      "last_price": 62651.1289,
       "conviction": 25.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Negative momentum -25%"
     }
   },
-  "run_date": "2026-07-31 15:26 UTC"
+  "run_date": "2026-07-31 15:39 UTC"
 }
