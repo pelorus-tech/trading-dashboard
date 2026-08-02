@@ -83,8 +83,8 @@
     },
     "XOM": {
       "last_price": 155.44,
-      "conviction": 50.3,
-      "note": "Weak ROE 10%; Conservative debt (D/E 0.18); Okay margins 8%"
+      "conviction": 75.5,
+      "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
       "last_price": 52.36,
@@ -102,12 +102,12 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +31%"
     },
     "BTC-USD": {
-      "last_price": 63423.6211,
-      "conviction": 40.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -27%"
+      "last_price": 63189.1797,
+      "conviction": 25.0,
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Negative momentum -29%"
     }
   },
-  "run_date": "2026-08-02 06:42 UTC",
+  "run_date": "2026-08-02 10:05 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
