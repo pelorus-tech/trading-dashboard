@@ -102,12 +102,12 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +31%"
     },
     "BTC-USD": {
-      "last_price": 62548.9609,
+      "last_price": 62664.8789,
       "conviction": 25.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Negative momentum -29%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Negative momentum -26%"
     }
   },
-  "run_date": "2026-08-03 07:39 UTC",
+  "run_date": "2026-08-03 11:39 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
