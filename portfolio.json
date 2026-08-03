@@ -67,47 +67,47 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 304.985,
+      "last_price": 304.3108,
       "conviction": 59.0,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 482.9,
+      "last_price": 486.445,
       "conviction": 46.5,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 206.3175,
+      "last_price": 206.86,
       "conviction": 64.5,
       "note": "Excellent ROE 114% (moat signal); Conservative debt (D/E 0.07); Strong margins 63%"
     },
     "XOM": {
-      "last_price": 155.59,
+      "last_price": 155.055,
       "conviction": 75.5,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 51.8682,
+      "last_price": 51.92,
       "conviction": 50.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +67%"
     },
     "GLD": {
-      "last_price": 370.0707,
+      "last_price": 370.259,
       "conviction": 50.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +24%"
     },
     "USO": {
-      "last_price": 121.18,
+      "last_price": 121.37,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +35%"
     },
     "BTC-USD": {
-      "last_price": 63830.9219,
+      "last_price": 63757.1211,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -26%"
     }
   },
-  "run_date": "2026-08-03 15:11 UTC",
+  "run_date": "2026-08-03 16:05 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -126,13 +126,13 @@
     },
     {
       "d": "2026-08-03",
-      "eq": 955.33,
-      "spy": 754.91
+      "eq": 954.95,
+      "spy": 755.99
     }
   ],
   "peak_equity": 967.36,
   "exposure": {
-    "energy": 0.3992
+    "energy": 0.3989
   },
-  "drawdown": 0.0124
+  "drawdown": 0.0128
 }
