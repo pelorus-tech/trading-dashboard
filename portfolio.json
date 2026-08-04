@@ -20,6 +20,21 @@
       "shares": NaN,
       "entry": NaN,
       "stop": NaN
+    },
+    "LNC": {
+      "shares": NaN,
+      "entry": NaN,
+      "stop": NaN
+    },
+    "PBR-A": {
+      "shares": NaN,
+      "entry": NaN,
+      "stop": NaN
+    },
+    "PBR": {
+      "shares": NaN,
+      "entry": NaN,
+      "stop": NaN
     }
   },
   "history": [
@@ -89,6 +104,30 @@
       "shares": NaN,
       "price": NaN,
       "fee": NaN
+    },
+    {
+      "ts": "2026-08-04T10:48:01.766670",
+      "action": "BUY",
+      "ticker": "LNC",
+      "shares": NaN,
+      "price": NaN,
+      "fee": NaN
+    },
+    {
+      "ts": "2026-08-04T10:48:02.795383",
+      "action": "BUY",
+      "ticker": "PBR-A",
+      "shares": NaN,
+      "price": NaN,
+      "fee": NaN
+    },
+    {
+      "ts": "2026-08-04T10:48:03.532390",
+      "action": "BUY",
+      "ticker": "PBR",
+      "shares": NaN,
+      "price": NaN,
+      "fee": NaN
     }
   ],
   "watchlist": {
@@ -109,7 +148,7 @@
     },
     "XOM": {
       "last_price": NaN,
-      "conviction": 63.7,
+      "conviction": 73.2,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
@@ -128,12 +167,27 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +35%"
     },
     "BTC-USD": {
-      "last_price": 63692.5,
+      "last_price": 63712.8516,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -26%"
+    },
+    "LNC": {
+      "last_price": NaN,
+      "conviction": 73.2,
+      "note": "Excellent ROE 23% (moat signal); Moderate debt (D/E 0.64); Okay margins 12%"
+    },
+    "PBR-A": {
+      "last_price": NaN,
+      "conviction": 78.3,
+      "note": "Excellent ROE 26% (moat signal); Moderate debt (D/E 0.83); Strong margins 22%"
+    },
+    "PBR": {
+      "last_price": NaN,
+      "conviction": 78.3,
+      "note": "Excellent ROE 26% (moat signal); Moderate debt (D/E 0.83); Strong margins 22%"
     }
   },
-  "run_date": "2026-08-04 06:37 UTC",
+  "run_date": "2026-08-04 10:48 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -163,5 +217,11 @@
   ],
   "peak_equity": 967.36,
   "exposure": {},
-  "drawdown": 0.0
+  "drawdown": 0.0,
+  "discovered": {
+    "LNC": "Screened: ROE 23%, P/E 3.9, D/E 0.64",
+    "PBR-A": "Screened: ROE 26%, P/E 5.3, D/E 0.83",
+    "PBR": "Screened: ROE 26%, P/E 6.0, D/E 0.83"
+  },
+  "last_run": "2026-08-04T10:48:03.730062+00:00"
 }
