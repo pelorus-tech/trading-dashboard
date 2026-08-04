@@ -1,5 +1,5 @@
 {
-  "cash": 573.9902913148194,
+  "cash": NaN,
   "positions": {
     "USO": {
       "shares": 1.523862,
@@ -10,6 +10,16 @@
       "shares": 1.264103,
       "entry": 152.6300048828125,
       "stop": 147.61
+    },
+    "SLV": {
+      "shares": NaN,
+      "entry": NaN,
+      "stop": NaN
+    },
+    "GLD": {
+      "shares": NaN,
+      "entry": NaN,
+      "stop": NaN
     }
   },
   "history": [
@@ -63,51 +73,67 @@
       "ticker": "XOM",
       "shares": 1.264103,
       "price": 152.6300048828125
+    },
+    {
+      "ts": "2026-08-04T06:37:33.372116",
+      "action": "BUY",
+      "ticker": "SLV",
+      "shares": NaN,
+      "price": NaN,
+      "fee": NaN
+    },
+    {
+      "ts": "2026-08-04T06:37:33.741576",
+      "action": "BUY",
+      "ticker": "GLD",
+      "shares": NaN,
+      "price": NaN,
+      "fee": NaN
     }
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 303.42,
+      "last_price": NaN,
       "conviction": 59.0,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 487.65,
-      "conviction": 46.5,
+      "last_price": NaN,
+      "conviction": 51.0,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 206.64,
-      "conviction": 64.5,
+      "last_price": NaN,
+      "conviction": 57.8,
       "note": "Excellent ROE 114% (moat signal); Conservative debt (D/E 0.07); Strong margins 63%"
     },
     "XOM": {
-      "last_price": 155.06,
-      "conviction": 75.5,
+      "last_price": NaN,
+      "conviction": 63.7,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 52.46,
-      "conviction": 50.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +67%"
+      "last_price": NaN,
+      "conviction": 65.0,
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +67%"
     },
     "GLD": {
-      "last_price": 371.71,
-      "conviction": 50.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +24%"
+      "last_price": NaN,
+      "conviction": 65.0,
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +24%"
     },
     "USO": {
-      "last_price": 122.12,
+      "last_price": NaN,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +35%"
     },
     "BTC-USD": {
-      "last_price": 63800.9414,
+      "last_price": 63692.5,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -26%"
     }
   },
-  "run_date": "2026-08-04 03:31 UTC",
+  "run_date": "2026-08-04 06:37 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -131,13 +157,11 @@
     },
     {
       "d": "2026-08-04",
-      "eq": 956.1,
-      "spy": 757.67
+      "eq": NaN,
+      "spy": NaN
     }
   ],
   "peak_equity": 967.36,
-  "exposure": {
-    "energy": 0.3997
-  },
-  "drawdown": 0.0116
+  "exposure": {},
+  "drawdown": 0.0
 }
