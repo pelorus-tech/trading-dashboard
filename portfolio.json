@@ -102,12 +102,12 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +35%"
     },
     "BTC-USD": {
-      "last_price": 63625.0391,
+      "last_price": 63800.9414,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -26%"
     }
   },
-  "run_date": "2026-08-03 21:43 UTC",
+  "run_date": "2026-08-04 03:31 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -126,6 +126,11 @@
     },
     {
       "d": "2026-08-03",
+      "eq": 956.1,
+      "spy": 757.67
+    },
+    {
+      "d": "2026-08-04",
       "eq": 956.1,
       "spy": 757.67
     }
