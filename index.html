@@ -55,6 +55,7 @@
         <div class="lbl">OPEN P&L</div>
         <div id="openpnl" style="font-size:20px; font-weight:600; color:var(--green); margin-top:2px;">+$0.00</div>
         <div class="micro" id="deployed">DEPLOYED 20% · CASH $800</div>
+        <div class="micro" id="lastrun" style="margin-top:2px;"></div>
       </div>
     </div>
     <div class="hair"></div>
@@ -174,6 +175,19 @@ function render() {
   pn.style.color = pnl>=0 ? "var(--green)" : "var(--red)";
   document.getElementById("deployed").textContent =
     "DEPLOYED "+Math.round(posVal/total*100)+"% · CASH $"+DATA.cash.toFixed(0);
+
+  // Heartbeat — written every run, trade or no trade
+  const lrEl = document.getElementById("lastrun");
+  if (DATA.last_run) {
+    const hrs = (Date.now() - new Date(DATA.last_run).getTime()) / 3.6e6;
+    const age = hrs < 1 ? Math.round(hrs*60)+"M" : hrs < 48 ? hrs.toFixed(0)+"H" : (hrs/24).toFixed(1)+"D";
+    const stale = hrs > 26;
+    const disc = DATA.discovered && Object.keys(DATA.discovered).length
+      ? " · DISCOVERY: " + Object.keys(DATA.discovered).join(", ") : "";
+    lrEl.innerHTML = `<span style="color:${stale ? "var(--red)" : "var(--dim)"};">${stale ? "⛔" : "●"} LAST AGENT RUN ${age} AGO${disc}</span>`;
+  } else {
+    lrEl.textContent = "LAST AGENT RUN — AWAITING FIRST HEARTBEAT";
+  }
 
   // Positions block — loops over WHATEVER is currently open, not a fixed asset
   const posBlock = document.getElementById("positions-block");
