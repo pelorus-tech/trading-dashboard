@@ -223,7 +223,7 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +43%"
     },
     "BTC-USD": {
-      "last_price": 64017.0703,
+      "last_price": 64297.6016,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -29%"
     },
@@ -257,18 +257,18 @@
       "conviction": 49.7,
       "note": "Decent ROE 18%; High leverage (D/E 1.29) \u2014 Buffett red flag; Strong margins 17%"
     },
-    "BBD": {
-      "last_price": 3.49,
-      "conviction": 56.8,
-      "note": "Decent ROE 13%; Strong margins 25%; Revenue growing 10%/yr"
-    },
     "FIS": {
       "last_price": 44.26,
       "conviction": 63.1,
       "note": "Decent ROE 17%; High leverage (D/E 1.32) \u2014 Buffett red flag; Strong margins 23%"
+    },
+    "BBD": {
+      "last_price": 3.49,
+      "conviction": 56.8,
+      "note": "Decent ROE 13%; Strong margins 25%; Revenue growing 10%/yr"
     }
   },
-  "run_date": "2026-08-05 03:27 UTC",
+  "run_date": "2026-08-05 06:38 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -306,8 +306,8 @@
   "drawdown": 0.0,
   "discovered": {
     "T": "Screened: ROE 18%, P/E 7.8, D/E 1.29",
-    "BBD": "Screened: ROE 13%, P/E 8.5, D/E n/a",
-    "FIS": "Screened: ROE 17%, P/E 8.6, D/E 1.32"
+    "FIS": "Screened: ROE 17%, P/E 8.7, D/E 1.32",
+    "BBD": "Screened: ROE 13%, P/E 8.7, D/E n/a"
   },
-  "last_run": "2026-08-05T03:27:01.185467+00:00"
+  "last_run": "2026-08-05T06:38:28.459956+00:00"
 }
