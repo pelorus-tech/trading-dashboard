@@ -139,7 +139,7 @@
     },
     "XOM": {
       "last_price": 153.04,
-      "conviction": 80.0,
+      "conviction": 70.8,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
@@ -158,9 +158,9 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +48%"
     },
     "BTC-USD": {
-      "last_price": 64970.4688,
+      "last_price": 64957.0586,
       "conviction": 40.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -29%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -28%"
     },
     "PBR-A": {
       "last_price": 16.06,
@@ -188,7 +188,7 @@
       "note": "Decent ROE 18%; High leverage (D/E 1.29) \u2014 Buffett red flag; Strong margins 17%"
     }
   },
-  "run_date": "2026-08-08 05:07 UTC",
+  "run_date": "2026-08-08 08:55 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -249,5 +249,5 @@
     "APA": "Screened: ROE 27%, P/E 7.7, D/E 0.47",
     "T": "Screened: ROE 18%, P/E 7.8, D/E 1.29"
   },
-  "last_run": "2026-08-08T05:07:38.183721+00:00"
+  "last_run": "2026-08-08T08:55:00.178428+00:00"
 }
