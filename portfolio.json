@@ -158,9 +158,9 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +48%"
     },
     "BTC-USD": {
-      "last_price": 65007.9492,
+      "last_price": 64993.8008,
       "conviction": 40.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -24%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -27%"
     },
     "PBR-A": {
       "last_price": 16.06,
@@ -172,18 +172,23 @@
       "conviction": 85.1,
       "note": "Excellent ROE 26% (moat signal); Moderate debt (D/E 0.83); Strong margins 22%"
     },
-    "INTR": {
-      "last_price": 5.27,
-      "conviction": 38.8,
-      "note": "Decent ROE 16%; Strong margins 23%; Revenue growing 24%/yr"
+    "FIS": {
+      "last_price": 42.77,
+      "conviction": 66.4,
+      "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
-    "APA": {
-      "last_price": 37.63,
-      "conviction": 91.0,
-      "note": "Excellent ROE 27% (moat signal); Conservative debt (D/E 0.49); Strong margins 20%"
+    "BBD": {
+      "last_price": 3.37,
+      "conviction": 45.6,
+      "note": "Decent ROE 14%; Strong margins 26%; Modest growth 7%"
+    },
+    "T": {
+      "last_price": 23.79,
+      "conviction": 49.4,
+      "note": "Decent ROE 18%; High leverage (D/E 1.29) \u2014 Buffett red flag; Strong margins 17%"
     }
   },
-  "run_date": "2026-08-10 05:41 UTC",
+  "run_date": "2026-08-10 09:44 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -250,8 +255,9 @@
   },
   "drawdown": 0.0228,
   "discovered": {
-    "INTR": "Screened: ROE 16%, P/E 7.9, D/E n/a",
-    "APA": "Screened: ROE 27%, P/E 7.9, D/E 0.49"
+    "FIS": "Screened: ROE 22%, P/E 6.6, D/E 1.33",
+    "BBD": "Screened: ROE 14%, P/E 7.8, D/E n/a",
+    "T": "Screened: ROE 18%, P/E 7.9, D/E 1.29"
   },
-  "last_run": "2026-08-10T05:41:12.409741+00:00"
+  "last_run": "2026-08-10T09:44:10.313444+00:00"
 }
