@@ -158,9 +158,9 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +65%"
     },
     "BTC-USD": {
-      "last_price": 63339.2305,
-      "conviction": 25.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Negative momentum -28%"
+      "last_price": 63386.0586,
+      "conviction": 40.0,
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -28%"
     },
     "PBR-A": {
       "last_price": 16.13,
@@ -174,7 +174,7 @@
     },
     "TAL": {
       "last_price": 11.6,
-      "conviction": 71.8,
+      "conviction": 73.0,
       "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.10); Strong margins 28%"
     },
     "BBD": {
@@ -188,7 +188,7 @@
       "note": "Decent ROE 16%; Strong margins 23%; Revenue growing 24%/yr"
     }
   },
-  "run_date": "2026-08-13 20:56 UTC",
+  "run_date": "2026-08-13 21:25 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -274,5 +274,5 @@
     "BBD": "Screened: ROE 14%, P/E 7.3, D/E n/a",
     "INTR": "Screened: ROE 16%, P/E 7.8, D/E n/a"
   },
-  "last_run": "2026-08-13T20:56:59.941423+00:00"
+  "last_run": "2026-08-13T21:25:21.701638+00:00"
 }
