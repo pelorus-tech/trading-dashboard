@@ -158,37 +158,37 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +65%"
     },
     "BTC-USD": {
-      "last_price": 63386.0586,
+      "last_price": 63458.4688,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -28%"
     },
     "PBR-A": {
       "last_price": 16.13,
-      "conviction": 85.1,
-      "note": "Excellent ROE 26% (moat signal); Moderate debt (D/E 0.83); Strong margins 22%"
+      "conviction": 87.7,
+      "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
       "last_price": 17.89,
-      "conviction": 85.1,
-      "note": "Excellent ROE 26% (moat signal); Moderate debt (D/E 0.83); Strong margins 22%"
-    },
-    "TAL": {
-      "last_price": 11.6,
-      "conviction": 73.0,
-      "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.10); Strong margins 28%"
+      "conviction": 87.7,
+      "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "BBD": {
       "last_price": 3.15,
       "conviction": 50.1,
       "note": "Decent ROE 14%; Strong margins 26%; Modest growth 7%"
     },
-    "INTR": {
-      "last_price": 5.22,
-      "conviction": 38.8,
-      "note": "Decent ROE 16%; Strong margins 23%; Revenue growing 24%/yr"
+    "T": {
+      "last_price": 24.58,
+      "conviction": 48.6,
+      "note": "Decent ROE 18%; High leverage (D/E 1.29) \u2014 Buffett red flag; Strong margins 17%"
+    },
+    "APA": {
+      "last_price": 40.0,
+      "conviction": 91.0,
+      "note": "Excellent ROE 27% (moat signal); Conservative debt (D/E 0.49); Strong margins 20%"
     }
   },
-  "run_date": "2026-08-13 21:25 UTC",
+  "run_date": "2026-08-14 02:38 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -259,6 +259,11 @@
       "d": "2026-08-13",
       "eq": 947.78,
       "spy": 777.88
+    },
+    {
+      "d": "2026-08-14",
+      "eq": 947.78,
+      "spy": 777.88
     }
   ],
   "peak_equity": 967.36,
@@ -270,9 +275,9 @@
   },
   "drawdown": 0.0202,
   "discovered": {
-    "TAL": "Screened: ROE 24%, P/E 7.2, D/E 0.10",
     "BBD": "Screened: ROE 14%, P/E 7.3, D/E n/a",
-    "INTR": "Screened: ROE 16%, P/E 7.8, D/E n/a"
+    "T": "Screened: ROE 18%, P/E 8.0, D/E 1.29",
+    "APA": "Screened: ROE 27%, P/E 8.4, D/E 0.49"
   },
-  "last_run": "2026-08-13T21:25:21.701638+00:00"
+  "last_run": "2026-08-14T02:38:55.514980+00:00"
 }
