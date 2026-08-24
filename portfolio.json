@@ -123,62 +123,62 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 313.04,
+      "last_price": 311.7954,
       "conviction": 65.7,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 485.655,
+      "last_price": 487.65,
       "conviction": 51.0,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 209.03,
+      "last_price": 209.27,
       "conviction": 64.5,
       "note": "Excellent ROE 114% (moat signal); Conservative debt (D/E 0.07); Strong margins 63%"
     },
     "XOM": {
-      "last_price": 164.3501,
-      "conviction": 64.7,
+      "last_price": 163.26,
+      "conviction": 69.3,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 62.32,
+      "last_price": 62.45,
       "conviction": 55.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +50%"
     },
     "GLD": {
-      "last_price": 428.295,
+      "last_price": 428.6095,
       "conviction": 55.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +21%"
     },
     "USO": {
-      "last_price": 132.4768,
+      "last_price": 132.13,
       "conviction": 70.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +67%"
     },
     "BTC-USD": {
-      "last_price": 79255.6406,
+      "last_price": 79711.6328,
       "conviction": 30.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -27%"
     },
     "PBR-A": {
-      "last_price": 16.745,
+      "last_price": 16.775,
       "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 18.555,
+      "last_price": 18.585,
       "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "FIS": {
-      "last_price": 41.435,
+      "last_price": 41.845,
       "conviction": 66.4,
       "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
     "BBD": {
-      "last_price": 3.13,
+      "last_price": 3.165,
       "conviction": 50.1,
       "note": "Decent ROE 14%; Strong margins 26%; Modest growth 7%"
     },
@@ -188,8 +188,8 @@
       "note": "Decent ROE 16%; Strong margins 23%; Revenue growing 24%/yr"
     },
     "T": {
-      "last_price": 25.31,
-      "conviction": 43.4,
+      "last_price": 25.645,
+      "conviction": 43.1,
       "note": "Decent ROE 18%; High leverage (D/E 1.29) \u2014 Buffett red flag; Strong margins 17%"
     },
     "ITUB": {
@@ -208,7 +208,7 @@
       "note": "Excellent ROE 21% (moat signal); Strong margins 36%; Modest growth 1%"
     }
   },
-  "run_date": "2026-08-24 14:21 UTC",
+  "run_date": "2026-08-24 15:18 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -332,21 +332,21 @@
     },
     {
       "d": "2026-08-24",
-      "eq": 987.86,
-      "spy": 763.13
+      "eq": 986.53,
+      "spy": 762.72
     }
   ],
   "peak_equity": 1000.4,
   "exposure": {
-    "energy": 0.5976,
-    "tech": 0.1924,
-    "metals": 0.21
+    "energy": 0.5977,
+    "tech": 0.1919,
+    "metals": 0.2105
   },
-  "drawdown": 0.0125,
+  "drawdown": 0.0139,
   "discovered": {
+    "FIS": "Screened: ROE 22%, P/E 6.4, D/E 1.33",
     "BBD": "Screened: ROE 14%, P/E 7.5, D/E n/a",
-    "INTR": "Screened: ROE 16%, P/E 8.3, D/E n/a",
-    "SYF": "Screened: ROE 21%, P/E 8.3, D/E n/a"
+    "T": "Screened: ROE 18%, P/E 8.5, D/E 1.29"
   },
-  "last_run": "2026-08-24T14:21:14.846580+00:00"
+  "last_run": "2026-08-24T15:18:37.803897+00:00"
 }
