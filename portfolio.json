@@ -158,7 +158,7 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +67%"
     },
     "BTC-USD": {
-      "last_price": 79875.7031,
+      "last_price": 79046.9062,
       "conviction": 30.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -25%"
     },
@@ -208,7 +208,7 @@
       "note": "Excellent ROE 21% (moat signal); Strong margins 36%; Modest growth 1%"
     }
   },
-  "run_date": "2026-08-25 08:54 UTC",
+  "run_date": "2026-08-25 13:06 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -349,5 +349,5 @@
   },
   "drawdown": 0.0559,
   "discovered": {},
-  "last_run": "2026-08-25T08:54:42.491910+00:00"
+  "last_run": "2026-08-25T13:06:24.167661+00:00"
 }
