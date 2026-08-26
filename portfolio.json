@@ -123,62 +123,62 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 310.245,
-      "conviction": 59.0,
+      "last_price": 312.965,
+      "conviction": 65.7,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 491.6,
+      "last_price": 496.385,
       "conviction": 51.0,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 212.925,
+      "last_price": 210.78,
       "conviction": 64.5,
       "note": "Excellent ROE 114% (moat signal); Conservative debt (D/E 0.07); Strong margins 63%"
     },
     "XOM": {
-      "last_price": 161.0,
-      "conviction": 69.7,
+      "last_price": 160.25,
+      "conviction": 69.8,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 62.3,
-      "conviction": 55.0,
+      "last_price": 61.8797,
+      "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +48%"
     },
     "GLD": {
-      "last_price": 427.94,
+      "last_price": 424.02,
       "conviction": 55.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +19%"
     },
     "USO": {
-      "last_price": 126.4268,
+      "last_price": 126.91,
       "conviction": 80.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +59%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +75%"
     },
     "BTC-USD": {
-      "last_price": 78092.6875,
+      "last_price": 78505.3438,
       "conviction": 30.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -25%"
     },
     "PBR-A": {
-      "last_price": 16.085,
+      "last_price": 16.185,
       "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 17.855,
+      "last_price": 17.9595,
       "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "FIS": {
-      "last_price": 40.22,
+      "last_price": 40.315,
       "conviction": 59.7,
       "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
     "BBD": {
-      "last_price": 3.255,
+      "last_price": 3.305,
       "conviction": 45.6,
       "note": "Decent ROE 14%; Strong margins 26%; Modest growth 7%"
     },
@@ -203,12 +203,12 @@
       "note": "Excellent ROE 27% (moat signal); Conservative debt (D/E 0.49); Strong margins 20%"
     },
     "SYF": {
-      "last_price": 79.94,
+      "last_price": 80.65,
       "conviction": 60.1,
       "note": "Excellent ROE 21% (moat signal); Strong margins 36%; Modest growth 1%"
     }
   },
-  "run_date": "2026-08-26 13:11 UTC",
+  "run_date": "2026-08-26 14:21 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -342,17 +342,21 @@
     },
     {
       "d": "2026-08-26",
-      "eq": 944.44,
-      "spy": 765.91
+      "eq": 968.02,
+      "spy": 765.92
     }
   ],
   "peak_equity": 1000.4,
   "exposure": {
-    "energy": 0.6003,
-    "tech": 0.1999,
-    "metals": 0.1999
+    "energy": 0.5916,
+    "tech": 0.1963,
+    "metals": 0.2122
   },
-  "drawdown": 0.0559,
-  "discovered": {},
-  "last_run": "2026-08-26T13:11:22.916201+00:00"
+  "drawdown": 0.0324,
+  "discovered": {
+    "FIS": "Screened: ROE 22%, P/E 6.2, D/E 1.33",
+    "BBD": "Screened: ROE 14%, P/E 7.7, D/E n/a",
+    "SYF": "Screened: ROE 21%, P/E 8.3, D/E n/a"
+  },
+  "last_run": "2026-08-26T14:21:09.427942+00:00"
 }
