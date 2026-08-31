@@ -158,7 +158,7 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +63%"
     },
     "BTC-USD": {
-      "last_price": 79114.4766,
+      "last_price": 78540.6016,
       "conviction": 30.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -27%"
     },
@@ -218,7 +218,7 @@
       "note": "Excellent ROE 34% (moat signal); High leverage (D/E 1.45) \u2014 Buffett red flag; Okay margins 8%"
     }
   },
-  "run_date": "2026-08-31 19:35 UTC",
+  "run_date": "2026-08-31 23:46 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -377,21 +377,17 @@
     },
     {
       "d": "2026-08-31",
-      "eq": 989.21,
-      "spy": 766.47
+      "eq": 944.44,
+      "spy": 767.05
     }
   ],
   "peak_equity": 1000.4,
   "exposure": {
-    "energy": 0.6068,
-    "tech": 0.1938,
-    "metals": 0.1994
+    "energy": 0.6003,
+    "tech": 0.1999,
+    "metals": 0.1999
   },
-  "drawdown": 0.0112,
-  "discovered": {
-    "GAP": "Screened: ROE 34%, P/E 6.7, D/E 1.45",
-    "HMY": "Screened: ROE 48%, P/E 6.8, D/E 0.13",
-    "BBD": "Screened: ROE 14%, P/E 7.6, D/E n/a"
-  },
-  "last_run": "2026-08-31T19:35:47.879705+00:00"
+  "drawdown": 0.0559,
+  "discovered": {},
+  "last_run": "2026-08-31T23:46:46.927918+00:00"
 }
