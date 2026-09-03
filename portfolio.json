@@ -123,58 +123,58 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 328.61,
+      "last_price": 327.43,
       "conviction": 61.2,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 510.825,
+      "last_price": 511.715,
       "conviction": 57.8,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 227.49,
+      "last_price": 229.56,
       "conviction": 69.0,
       "note": "Excellent ROE 117% (moat signal); Conservative debt (D/E 0.17); Strong margins 64%"
     },
     "XOM": {
-      "last_price": 163.78,
-      "conviction": 69.3,
+      "last_price": 163.08,
+      "conviction": 69.4,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 60.5995,
+      "last_price": 60.435,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +51%"
     },
     "GLD": {
-      "last_price": 411.51,
+      "last_price": 410.27,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +19%"
     },
     "USO": {
-      "last_price": 142.01,
+      "last_price": 142.03,
       "conviction": 70.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +60%"
     },
     "BTC-USD": {
-      "last_price": 80996.3828,
+      "last_price": 81224.1875,
       "conviction": 30.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Negative momentum -28%"
     },
     "PBR-A": {
-      "last_price": 18.625,
+      "last_price": 18.675,
       "conviction": 83.2,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 20.54,
+      "last_price": 20.605,
       "conviction": 83.2,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "FIS": {
-      "last_price": 40.64,
-      "conviction": 59.7,
+      "last_price": 42.085,
+      "conviction": 66.4,
       "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
     "BBD": {
@@ -213,17 +213,17 @@
       "note": "Excellent ROE 48% (moat signal); Conservative debt (D/E 0.13); Strong margins 30%"
     },
     "GAP": {
-      "last_price": 22.3106,
+      "last_price": 22.36,
       "conviction": 43.6,
       "note": "Excellent ROE 34% (moat signal); High leverage (D/E 1.45) \u2014 Buffett red flag; Okay margins 8%"
     },
     "TAL": {
-      "last_price": 12.13,
-      "conviction": 89.2,
+      "last_price": 12.07,
+      "conviction": 89.3,
       "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.10); Strong margins 28%"
     }
   },
-  "run_date": "2026-09-03 17:08 UTC",
+  "run_date": "2026-09-03 19:16 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -397,21 +397,21 @@
     },
     {
       "d": "2026-09-03",
-      "eq": 1030.42,
-      "spy": 772.56
+      "eq": 1029.45,
+      "spy": 773.37
     }
   ],
   "peak_equity": 1031.78,
   "exposure": {
-    "energy": 0.613,
-    "tech": 0.1936,
-    "metals": 0.1935
+    "energy": 0.6139,
+    "tech": 0.1931,
+    "metals": 0.1931
   },
-  "drawdown": 0.0013,
+  "drawdown": 0.0023,
   "discovered": {
+    "FIS": "Screened: ROE 22%, P/E 6.5, D/E 1.33",
     "GAP": "Screened: ROE 34%, P/E 6.7, D/E 1.45",
-    "HMY": "Screened: ROE 48%, P/E 7.2, D/E 0.13",
-    "TAL": "Screened: ROE 24%, P/E 7.6, D/E 0.10"
+    "TAL": "Screened: ROE 24%, P/E 7.5, D/E 0.10"
   },
-  "last_run": "2026-09-03T17:08:37.799407+00:00"
+  "last_run": "2026-09-03T19:16:30.530696+00:00"
 }
