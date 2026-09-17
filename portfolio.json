@@ -123,57 +123,57 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 335.715,
+      "last_price": 337.38,
       "conviction": 65.7,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 495.525,
+      "last_price": 496.79,
       "conviction": 57.8,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 219.34,
+      "last_price": 219.485,
       "conviction": 69.0,
       "note": "Excellent ROE 117% (moat signal); Conservative debt (D/E 0.17); Strong margins 64%"
     },
     "XOM": {
-      "last_price": 162.6088,
+      "last_price": 163.0,
       "conviction": 69.4,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 59.25,
+      "last_price": 58.955,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +59%"
     },
     "GLD": {
-      "last_price": 399.595,
+      "last_price": 398.235,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +23%"
     },
     "USO": {
-      "last_price": 156.38,
+      "last_price": 155.27,
       "conviction": 70.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +75%"
     },
     "BTC-USD": {
-      "last_price": 76701.1406,
+      "last_price": 76546.7422,
       "conviction": 55.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Negative momentum -14%"
     },
     "PBR-A": {
-      "last_price": 18.995,
+      "last_price": 18.98,
       "conviction": 83.2,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 20.985,
+      "last_price": 20.95,
       "conviction": 83.2,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "FIS": {
-      "last_price": 36.865,
+      "last_price": 36.575,
       "conviction": 59.7,
       "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
@@ -213,7 +213,7 @@
       "note": "Excellent ROE 48% (moat signal); Conservative debt (D/E 0.13); Strong margins 30%"
     },
     "GAP": {
-      "last_price": 20.755,
+      "last_price": 20.785,
       "conviction": 45.4,
       "note": "Excellent ROE 34% (moat signal); High leverage (D/E 1.45) \u2014 Buffett red flag; Okay margins 8%"
     },
@@ -233,12 +233,12 @@
       "note": "Excellent ROE 20% (moat signal); High leverage (D/E 1.09) \u2014 Buffett red flag; Okay margins 6%"
     },
     "ACGL": {
-      "last_price": 96.36,
+      "last_price": 96.08,
       "conviction": 67.8,
       "note": "Decent ROE 20%; Conservative debt (D/E 0.18); Strong margins 24%"
     }
   },
-  "run_date": "2026-09-17 17:43 UTC",
+  "run_date": "2026-09-17 19:42 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -482,21 +482,21 @@
     },
     {
       "d": "2026-09-17",
-      "eq": 1036.29,
-      "spy": 762.38
+      "eq": 1036.6,
+      "spy": 762.83
     }
   ],
   "peak_equity": 1053.04,
   "exposure": {
-    "energy": 0.6166,
-    "tech": 0.1967,
-    "metals": 0.1868
+    "energy": 0.6163,
+    "tech": 0.1976,
+    "metals": 0.1861
   },
-  "drawdown": 0.0159,
+  "drawdown": 0.0156,
   "discovered": {
-    "FIS": "Screened: ROE 22%, P/E 5.7, D/E 1.33",
+    "FIS": "Screened: ROE 22%, P/E 5.6, D/E 1.33",
     "GAP": "Screened: ROE 34%, P/E 6.3, D/E 1.45",
     "ACGL": "Screened: ROE 20%, P/E 7.5, D/E 0.18"
   },
-  "last_run": "2026-09-17T17:43:54.975021+00:00"
+  "last_run": "2026-09-17T19:42:17.172869+00:00"
 }
