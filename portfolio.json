@@ -123,57 +123,57 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 341.335,
+      "last_price": 339.89,
       "conviction": 65.7,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 497.36,
+      "last_price": 498.38,
       "conviction": 57.8,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 229.015,
+      "last_price": 229.3,
       "conviction": 64.5,
       "note": "Excellent ROE 117% (moat signal); Conservative debt (D/E 0.17); Strong margins 64%"
     },
     "XOM": {
-      "last_price": 159.66,
-      "conviction": 69.9,
+      "last_price": 158.73,
+      "conviction": 70.0,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 59.73,
+      "last_price": 60.9232,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +55%"
     },
     "GLD": {
-      "last_price": 397.78,
+      "last_price": 400.6,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +24%"
     },
     "USO": {
-      "last_price": 146.146,
+      "last_price": 143.14,
       "conviction": 80.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +80%"
     },
     "BTC-USD": {
-      "last_price": 86473.7812,
+      "last_price": 86441.8828,
       "conviction": 45.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Negative momentum -20%"
     },
     "PBR-A": {
-      "last_price": 18.8223,
+      "last_price": 18.95,
       "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 20.685,
+      "last_price": 20.74,
       "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "FIS": {
-      "last_price": 35.115,
+      "last_price": 35.005,
       "conviction": 64.2,
       "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
@@ -208,7 +208,7 @@
       "note": "Excellent ROE 21% (moat signal); Strong margins 36%; Modest growth 1%"
     },
     "HMY": {
-      "last_price": 19.43,
+      "last_price": 19.905,
       "conviction": 91.0,
       "note": "Excellent ROE 48% (moat signal); Conservative debt (D/E 0.13); Strong margins 30%"
     },
@@ -233,12 +233,12 @@
       "note": "Excellent ROE 20% (moat signal); High leverage (D/E 1.09) \u2014 Buffett red flag; Okay margins 6%"
     },
     "ACGL": {
-      "last_price": 96.08,
-      "conviction": 67.8,
+      "last_price": 95.09,
+      "conviction": 68.0,
       "note": "Decent ROE 20%; Conservative debt (D/E 0.18); Strong margins 24%"
     }
   },
-  "run_date": "2026-09-22 17:44 UTC",
+  "run_date": "2026-09-22 19:43 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -507,21 +507,21 @@
     },
     {
       "d": "2026-09-22",
-      "eq": 1030.04,
-      "spy": 773.44
+      "eq": 1031.39,
+      "spy": 774.37
     }
   ],
   "peak_equity": 1053.04,
   "exposure": {
     "energy": 0.6118,
-    "tech": 0.2012,
-    "metals": 0.1871
+    "tech": 0.2,
+    "metals": 0.1881
   },
-  "drawdown": 0.0218,
+  "drawdown": 0.0206,
   "discovered": {
     "FIS": "Screened: ROE 22%, P/E 5.4, D/E 1.33",
-    "HMY": "Screened: ROE 48%, P/E 6.9, D/E 0.13",
-    "FRO": "Screened: ROE 54%, P/E 7.2, D/E 0.77"
+    "HMY": "Screened: ROE 48%, P/E 7.0, D/E 0.13",
+    "ACGL": "Screened: ROE 20%, P/E 7.4, D/E 0.18"
   },
-  "last_run": "2026-09-22T17:44:31.782421+00:00"
+  "last_run": "2026-09-22T19:43:08.057101+00:00"
 }
