@@ -157,52 +157,52 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 346.175,
-      "conviction": 65.7,
+      "last_price": 348.23,
+      "conviction": 61.2,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 523.39,
+      "last_price": 520.955,
       "conviction": 57.8,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 212.31,
+      "last_price": 212.05,
       "conviction": 66.8,
       "note": "Excellent ROE 117% (moat signal); Conservative debt (D/E 0.17); Strong margins 64%"
     },
     "XOM": {
-      "last_price": 177.365,
-      "conviction": 62.6,
+      "last_price": 178.035,
+      "conviction": 62.5,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 49.465,
+      "last_price": 49.345,
       "conviction": 50.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +31%"
     },
     "GLD": {
-      "last_price": 370.1302,
+      "last_price": 368.905,
       "conviction": 40.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Mild positive momentum +4%"
     },
     "USO": {
-      "last_price": 162.8599,
+      "last_price": 162.42,
       "conviction": 70.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +117%"
     },
     "BTC-USD": {
-      "last_price": 81020.8281,
+      "last_price": 81384.9297,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +23%"
     },
     "PBR-A": {
-      "last_price": 22.925,
+      "last_price": 22.905,
       "conviction": 83.2,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 25.605,
+      "last_price": 25.595,
       "conviction": 83.2,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
@@ -252,13 +252,13 @@
       "note": "Excellent ROE 34% (moat signal); High leverage (D/E 1.45) \u2014 Buffett red flag; Okay margins 8%"
     },
     "TAL": {
-      "last_price": 10.48,
+      "last_price": 10.445,
       "conviction": 77.5,
       "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.10); Strong margins 28%"
     },
     "FRO": {
-      "last_price": 51.68,
-      "conviction": 66.2,
+      "last_price": 51.22,
+      "conviction": 66.5,
       "note": "Excellent ROE 54% (moat signal); Moderate debt (D/E 0.77); Strong margins 55%"
     },
     "AEO": {
@@ -277,7 +277,7 @@
       "note": "Decent ROE 16%; High leverage (D/E 1.03) \u2014 Buffett red flag; Thin/negative margins 3%"
     },
     "AA": {
-      "last_price": 40.72,
+      "last_price": 38.61,
       "conviction": 70.9,
       "note": "Excellent ROE 21% (moat signal); Moderate debt (D/E 0.58); Okay margins 11%"
     },
@@ -287,7 +287,7 @@
       "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.13); Strong margins 32%"
     }
   },
-  "run_date": "2026-10-22 18:08 UTC",
+  "run_date": "2026-10-22 19:59 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -706,21 +706,21 @@
     },
     {
       "d": "2026-10-22",
-      "eq": 1131.75,
-      "spy": 762.31
+      "eq": 1134.28,
+      "spy": 763.73
     }
   ],
   "peak_equity": 1142.23,
   "exposure": {
-    "energy": 0.6628,
-    "tech": 0.1857,
-    "crypto": 0.1516
+    "energy": 0.6617,
+    "tech": 0.1864,
+    "crypto": 0.1519
   },
-  "drawdown": 0.0092,
+  "drawdown": 0.007,
   "discovered": {
     "TAL": "Screened: ROE 24%, P/E 6.5, D/E 0.10",
-    "FRO": "Screened: ROE 54%, P/E 7.8, D/E 0.77",
-    "FSM": "Screened: ROE 24%, P/E 8.1, D/E 0.13"
+    "AA": "Screened: ROE 21%, P/E 6.7, D/E 0.58",
+    "FRO": "Screened: ROE 54%, P/E 7.7, D/E 0.77"
   },
-  "last_run": "2026-10-22T18:08:43.002120+00:00"
+  "last_run": "2026-10-22T19:59:50.532736+00:00"
 }
