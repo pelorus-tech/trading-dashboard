@@ -192,7 +192,7 @@
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +105%"
     },
     "BTC-USD": {
-      "last_price": 79816.8906,
+      "last_price": 79714.3594,
       "conviction": 65.0,
       "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +27%"
     },
@@ -287,7 +287,7 @@
       "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.13); Strong margins 32%"
     }
   },
-  "run_date": "2026-10-26 19:30 UTC",
+  "run_date": "2026-10-26 20:59 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -726,21 +726,17 @@
     },
     {
       "d": "2026-10-26",
-      "eq": 1071.23,
-      "spy": 765.33
+      "eq": 924.46,
+      "spy": 765.37
     }
   ],
   "peak_equity": 1153.87,
   "exposure": {
-    "energy": 0.6475,
-    "tech": 0.1947,
-    "crypto": 0.1577
+    "energy": 0.6132,
+    "tech": 0.2042,
+    "crypto": 0.1825
   },
-  "drawdown": 0.0716,
-  "discovered": {
-    "FIS": "Screened: ROE 22%, P/E 5.6, D/E 1.33",
-    "BBD": "Screened: ROE 14%, P/E 6.5, D/E n/a",
-    "FSM": "Screened: ROE 24%, P/E 7.9, D/E 0.13"
-  },
-  "last_run": "2026-10-26T19:30:54.110053+00:00"
+  "drawdown": 0.1988,
+  "discovered": {},
+  "last_run": "2026-10-26T20:59:29.093508+00:00"
 }
