@@ -157,64 +157,64 @@
   ],
   "watchlist": {
     "AAPL": {
-      "last_price": 347.65,
+      "last_price": 346.9551,
       "conviction": 61.2,
       "note": "Excellent ROE 149% (moat signal); Moderate debt (D/E 0.78); Strong margins 28%"
     },
     "MSFT": {
-      "last_price": 524.495,
+      "last_price": 528.74,
       "conviction": 57.8,
       "note": "Excellent ROE 34% (moat signal); Conservative debt (D/E 0.29); Strong margins 40%"
     },
     "NVDA": {
-      "last_price": 211.0,
-      "conviction": 66.8,
+      "last_price": 217.65,
+      "conviction": 62.2,
       "note": "Excellent ROE 117% (moat signal); Conservative debt (D/E 0.17); Strong margins 64%"
     },
     "XOM": {
-      "last_price": 183.16,
-      "conviction": 61.7,
+      "last_price": 183.18,
+      "conviction": 61.6,
       "note": "Decent ROE 13%; Conservative debt (D/E 0.16); Okay margins 9%"
     },
     "SLV": {
-      "last_price": 48.7,
+      "last_price": 48.9199,
       "conviction": 60.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +32%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Strong 12-1 momentum +25%"
     },
     "GLD": {
-      "last_price": 366.635,
+      "last_price": 368.655,
       "conviction": 40.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Mild positive momentum +4%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Downtrend: price < 50d < 200d MA; Mild positive momentum +0%"
     },
     "USO": {
-      "last_price": 169.51,
+      "last_price": 165.17,
       "conviction": 70.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +102%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Uptrend: price > 50d > 200d MA; Strong 12-1 momentum +105%"
     },
     "BTC-USD": {
-      "last_price": 79949.0,
+      "last_price": 80349.7266,
       "conviction": 65.0,
-      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +25%"
+      "note": "Not an operating business \u2014 value framework doesn't apply (quant signals only); Mixed trend (MAs crossed); Strong 12-1 momentum +27%"
     },
     "PBR-A": {
-      "last_price": 23.575,
-      "conviction": 87.7,
+      "last_price": 19.0426,
+      "conviction": 81.0,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "PBR": {
-      "last_price": 26.195,
-      "conviction": 83.2,
+      "last_price": 21.695,
+      "conviction": 87.7,
       "note": "Excellent ROE 30% (moat signal); Moderate debt (D/E 0.76); Strong margins 24%"
     },
     "FIS": {
-      "last_price": 37.495,
+      "last_price": 37.23,
       "conviction": 61.9,
       "note": "Excellent ROE 22% (moat signal); High leverage (D/E 1.33) \u2014 Buffett red flag; Strong margins 28%"
     },
     "BBD": {
-      "last_price": 3.35,
-      "conviction": 41.1,
-      "note": "Decent ROE 14%; Strong margins 26%; Modest growth 7%"
+      "last_price": 2.7799,
+      "conviction": 56.8,
+      "note": "Decent ROE 14%; Strong margins 27%; Revenue growing 12%/yr"
     },
     "INTR": {
       "last_price": 5.23,
@@ -282,12 +282,12 @@
       "note": "Excellent ROE 21% (moat signal); Moderate debt (D/E 0.58); Okay margins 11%"
     },
     "FSM": {
-      "last_price": 9.525,
-      "conviction": 84.2,
+      "last_price": 9.26,
+      "conviction": 88.8,
       "note": "Excellent ROE 24% (moat signal); Conservative debt (D/E 0.13); Strong margins 32%"
     }
   },
-  "run_date": "2026-10-26 04:35 UTC",
+  "run_date": "2026-10-26 15:07 UTC",
   "equity_curve": [
     {
       "d": "2026-07-31",
@@ -726,17 +726,21 @@
     },
     {
       "d": "2026-10-26",
-      "eq": 924.96,
-      "spy": 759.97
+      "eq": 1053.43,
+      "spy": 767.2
     }
   ],
   "peak_equity": 1153.87,
   "exposure": {
-    "energy": 0.6129,
-    "tech": 0.2041,
-    "crypto": 0.183
+    "energy": 0.6386,
+    "tech": 0.1999,
+    "crypto": 0.1615
   },
-  "drawdown": 0.1984,
-  "discovered": {},
-  "last_run": "2026-10-26T04:35:36.059840+00:00"
+  "drawdown": 0.087,
+  "discovered": {
+    "FIS": "Screened: ROE 22%, P/E 5.7, D/E 1.33",
+    "BBD": "Screened: ROE 14%, P/E 6.2, D/E n/a",
+    "FSM": "Screened: ROE 24%, P/E 7.9, D/E 0.13"
+  },
+  "last_run": "2026-10-26T15:07:13.016319+00:00"
 }
